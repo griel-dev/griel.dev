@@ -1,3 +1,13 @@
+* {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	-webkit-font-smoothing: antialiased;
+	font-family: 'Barlow', Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	color: var(--dark);
+}
+
 body {
     margin: 0;
     flex-direction: column;
@@ -5,7 +15,10 @@ body {
 img {
     width: 100%;
 }
+a {
+    text-decoration: none;
+}
 //display to flex
-body, header, div, nav, ul, li {
+body, header, div, nav, ul, li, a {
     display: flex;
 }

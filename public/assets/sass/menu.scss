@@ -1,0 +1,44 @@
+@mixin menu {
+    nav {
+        display: flex;
+        transform: translateX(-100vw);
+        transition: 0.5s ease-in;
+        top: 75px;
+        width: 90%;
+        height: 100vh;
+        background-color: #0b2954f2;
+        position: absolute;
+        left: 0;
+        &.open {
+            transform: translateX(0px);
+            transition: 0.5s ease-out;
+        }
+        ul {
+            flex-direction: column;
+            padding: calc(var(--space)*2);
+            margin: 0;
+            width: 100%;
+            li {
+                background-color: var(--white);
+                justify-content: center;
+                align-items: center;
+                margin: var(--space) 0;
+                border-radius: calc(var(--space) + 5px) 0;
+                transition: 0.3s ease-in-out;
+                a {
+                    width: 100%;
+                    height: 100%;
+                    margin: 15px;
+                    justify-content: center;
+                    align-items: center;
+                    span {
+                        font-size: 17px;
+                    }
+                }
+                &:hover {
+                    background-color: #dedede;
+                }
+            }
+        }
+    }
+}

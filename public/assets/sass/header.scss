@@ -29,31 +29,5 @@ header {
             }
         }
     }
-    nav {
-        display: flex;
-        transform: translateX(-100vw);
-        transition: 0.5s ease-in;
-        top: 75px;
-        width: 90%;
-        height: 100vh;
-        background-color: #0b2954f2;
-        &.open {
-            transform: translateX(0px);
-            transition: 0.5s ease-out;
-        }
-        ul {
-            flex-direction: column;
-            padding: calc(var(--space)*2);
-            margin: 0;
-            width: 100%;
-            li {
-                padding: 15px;
-                background-color: var(--white);
-                justify-content: center;
-                align-items: center;
-                margin: var(--space) 0;
-                border-radius: calc(var(--space) + 5px) 0;
-            }
-        }
-    }
+    @include menu;
 }
