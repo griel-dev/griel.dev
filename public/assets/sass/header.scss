@@ -12,6 +12,8 @@ header {
                 width: auto;
                 height: 80px;
                 transform: translateY(5px);
+                position: relative;
+                z-index: 2;
             }
         }
         button {
@@ -34,13 +36,24 @@ header {
         top: 75px;
         width: 90%;
         height: 100vh;
+        background-color: #0b2954f2;
         &.open {
-            display: flex;
-            position: absolute;
-            background-color: #0b2954f2;
-            left: 0;
             transform: translateX(0px);
             transition: 0.5s ease-out;
+        }
+        ul {
+            flex-direction: column;
+            padding: calc(var(--space)*2);
+            margin: 0;
+            width: 100%;
+            li {
+                padding: 15px;
+                background-color: var(--white);
+                justify-content: center;
+                align-items: center;
+                margin: var(--space) 0;
+                border-radius: calc(var(--space) + 5px) 0;
+            }
         }
     }
 }

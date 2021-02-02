@@ -1,2 +1,2 @@
-
+import './main';
 import './menu';
