@@ -1,0 +1,30 @@
+
+#home {
+    section {
+        &#header {
+            height: calc(100vh - 75px);
+            background-image: url('../images/coding-924920.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            flex-direction: column;
+            justify-content: flex-end;
+            div {
+                background-color: rgb(255 255 255 / 80%);
+                height: 225px;
+                padding: 20px;
+                align-items: center;
+                h2 {
+                    text-align: center;
+                    color: var(--base-color);
+                    font-size: 25px;
+                    margin: 0;
+                    line-height: 45px;
+                    span {
+                        display: block;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}
