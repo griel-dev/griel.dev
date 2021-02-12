@@ -1,7 +1,7 @@
 <?php
 
 require_once($_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php');
-require_once $_SERVER['DOCUMENT_ROOT'] . '/vendor/griel/controller.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/vendor/griel/Controller.php';
 
 use Griel\Controller;
 use Griel\Controller\PageController;
