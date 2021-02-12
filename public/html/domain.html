@@ -1,0 +1,24 @@
+<main id="domain">
+    <header>
+        <h1>Cheque a disponibilidade de seu domínio</h1>
+        <hr />
+    </header>
+    <article>
+        <form>
+            <div class="label">
+                <label for="domain">Pesquise pelo seu domínio</label>
+                <input type="text" name="domain" id="domain" placeholder="seudominio.com" value="griel.com.br" />
+            </div>
+            <button type="submit" id="submit">Verificar</button>
+        </form>
+
+    </article>
+    <footer>
+        <p>Disponibilidade: <span id="disponivel">
+            {% if result is defined %}
+            a{{ result }}
+            {% endif %}
+        </span></p>
+    </footer>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

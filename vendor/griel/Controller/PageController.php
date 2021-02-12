@@ -4,7 +4,7 @@ namespace griel\Controller;
 
 require_once($_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php');
 
-use Griel\Controller;//
+use Griel\Controller;
 
 class PageController extends Controller {
 
