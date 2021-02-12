@@ -1,3 +1,4 @@
+#For Master branch
 /.idea
 Homestead.json
 Homestead.yaml
@@ -5,3 +6,14 @@ Homestead.yaml
 .phpunit.result.cache
 .vscode/
 /node_modules
+webpack.config.js
+README.md
+phpunit.xml
+package.json
+package-lock.json
+composer.lock
+composer.json
+artisan
+.styleci.yml
+.env.example
+.editorconfig
