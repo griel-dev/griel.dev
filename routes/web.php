@@ -19,7 +19,7 @@ $router->get('/', function() {
         'name'=>"Roberto",
         'site'=>"Griel"
     ]);
-    $griel->render('index');
+    $griel->render('soon');
 });
 
 $router->post('/teste', function(Illuminate\Http\Request $request){
@@ -32,15 +32,29 @@ $router->get('/dominios', function(Illuminate\Http\Request $request){
     
     if ($request->input('domain')) {
         $domain = new Domain();
-        $result = $domain->openCurl($request->input('domain'))['res'];
+        $dotCom = $domain->checkDotCom($request->input('domain'))['res'];
+        $dotComBr = $domain->checkDotComBr($request->input('domain'))['res'];
+        if ($dotComBr == 'ok') {
+            $dotComBr = true;
+        } else {
+            $dotComBr = false;
+        }
+        if ($dotCom == 'ok') {
+            $dotCom = true;
+        } else {
+            $dotCom = false;
+        }
     } else {
-        $result = '';
+        $dotCom = null;
+        $dotComBr = null;
     }
 
 
     $griel = new PageController([
         'title'=>'Cheque seu domínio',
-        'result'=>$result
+        'dotcom'=>$dotCom,
+        'dotcombr'=>$dotComBr,
+        'domainInput'=>$request->input('domain')
     ]);
     $griel->render('domain');
 });

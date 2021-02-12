@@ -1,30 +1,93 @@
 #domain {
+    background-color: var(--white);
+    margin: var(--space);
     header {
         background-color: inherit;
         h1 {
             margin: 0;
             padding: 0;
         }
-        hr {
-            border: none;
-            border-bottom: 5px solid var(--divisor);
-            width: 50%;
-        }
     }
     article {
         form {
+            flex-direction: column;
             div {
                 &.label {
-                    display: flex;
-                    flex-direction: column;
-                    margin: 0 50px;
-                    border: 1px solid var(--dark);
-                    padding: var(--space);
+                   @include input;
+                   margin-bottom: var(--space);
+                }
+            }
+            button {
+                &[type="submit"] {
+                    background-color: var(--button);
                     border-radius: var(--space);
-                    input {
-                        border: none;
+                    border: 1px solid var(--button);
+                    color: var(--white);
+                    outline: none;
+                    border: none;
+                    height: 50px;
+                    width: 230px;
+                    align-self: center;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: calc(var(--space) * 3);
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    margin: var(--space) 0;
+                    cursor: pointer;
+                    transition: .5s;
+                    &:hover {
+                        background-color: #07484c;
                     }
                 }
+            }
+        }
+    }
+    footer {
+        margin-top: var(--space);
+
+        section {
+            &#dot-com {
+                header {
+                    border-radius: 6px 6px 0 0;
+                    border-top: 5px solid #DB583D;
+                }
+            }
+            &#dot-comBr {
+                header {
+                    border-radius: 6px 6px 0 0;
+                    border-top: 5px solid #085E16;
+                }
+            }
+            header {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 0 10px;
+                img {
+                    height: 50px;
+                    width: auto;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    #domain {
+        header {
+
+        }
+        article {
+            form {
+                align-self: center;
+                width: 50%;
+            }
+        }
+        footer {
+            flex-direction: row;
+            section {
+                width: 100%;
+                margin: var(--space);
             }
         }
     }

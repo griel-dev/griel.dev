@@ -1,24 +1,55 @@
 <main id="domain">
     <header>
         <h1>Cheque a disponibilidade de seu domínio</h1>
-        <hr />
     </header>
+    <hr />
     <article>
         <form>
             <div class="label">
                 <label for="domain">Pesquise pelo seu domínio</label>
-                <input type="text" name="domain" id="domain" placeholder="seudominio.com" value="griel.com.br" />
+                <input type="text" name="domain" id="domain" placeholder="seudominio.com" />
             </div>
             <button type="submit" id="submit">Verificar</button>
         </form>
 
     </article>
-    <footer>
-        <p>Disponibilidade: <span id="disponivel">
-            {% if result is defined %}
-            a{{ result }}
-            {% endif %}
-        </span></p>
+    <footer id="result">
+        <section id="dot-com">
+            <header>
+                <img src="../assets/svg/dotcom.svg" alt="Domínio .com" />
+                <p>{{domainInput}}.com</p>
+            </header>
+            <article>
+                <h2>
+                    {% if dotcom == false %}
+                    INDISPONÍVEL
+                    {% else %}
+                    DISPONÍVEL!
+                    {%endif%}
+                </h2>
+            </article>
+            <footer>
+
+            </footer>
+        </section>
+        <section id="dot-comBr">
+            <header>
+                <img src="../assets/svg/dotcombr.svg" alt="Domínio .com" />
+                <p>{{domainInput}}.com.br</p>
+            </header>
+            <article>
+                <h2>
+                    {% if dotcombr == false %}
+                    INDISPONÍVEL
+                    {% else %}
+                    DISPONÍVEL!
+                    {%endif%}
+                </h2>
+            </article>
+            <footer>
+                
+            </footer>
+        </section>
     </footer>
 </main>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

@@ -1,0 +1,22 @@
+@mixin input {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--base-color);
+    padding: var(--space);
+    border-radius: var(--space);
+    label {
+        text-transform: uppercase;
+        font-weight: 600;
+        color: var(--base-color);
+        margin-bottom: var(--space);
+    }
+    input {
+        margin: 0;
+        padding: 0;
+        border: none;
+        outline: none;
+        height: calc(var(--space) * 3);
+        font-size: calc(var(--space) * 2);
+        text-transform: lowercase;
+    }
+}
