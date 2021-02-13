@@ -1,13 +1,11 @@
 <?php
-
 require_once($_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php');
 require_once $_SERVER['DOCUMENT_ROOT'] . '/vendor/griel/Controller.php';
 
 use Griel\Controller;
 use Griel\Controller\PageController;
 use Griel\Controller\Domain;
-
-
+use Griel\Controller\Counter;
 
 $router->get('/version', function () use ($router) {
     return $router->app->version();
@@ -28,6 +26,8 @@ $router->post('/teste', function(Illuminate\Http\Request $request){
 
 $router->get('/dominios', function(Illuminate\Http\Request $request){
 
+    
+    Counter::updateNumber();
 
     
     if ($request->input('domain')) {
