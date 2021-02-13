@@ -7,9 +7,13 @@ if (content) {
     btnSubmit === null || btnSubmit === void 0 ? void 0 : btnSubmit.addEventListener("click", (event) => {
         event.preventDefault();
         let input = content.querySelector("input#domain");
-        let inputValue = input.value.split(".")[0];
-        console.log(inputValue);
-        window.location.search = `?domain=${inputValue}`;
+        if (!input.value) {
+            input.focus();
+        }
+        else {
+            let inputValue = input.value.split(".")[0];
+            window.location.search = `?domain=${inputValue}`;
+        }
     });
     if (window.location.search == "") {
         results.style.display = 'none';

@@ -8,9 +8,13 @@ if (content) {
     btnSubmit?.addEventListener("click", (event)=>{
         event.preventDefault();
         let input = content.querySelector("input#domain");
-        let inputValue:Array<string> = input.value.split(".")[0];
-        console.log(inputValue);
-        window.location.search = `?domain=${inputValue}`;
+        if (!input.value) {
+            input.focus();
+        } else {
+            let inputValue:Array<string> = input.value.split(".")[0];
+            window.location.search = `?domain=${inputValue}`;
+        }
+        
     });
 
     if (window.location.search == "") {
