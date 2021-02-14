@@ -1,8 +1,9 @@
 #domain {
     background-color: var(--white);
-    margin: var(--space);
+    box-shadow: none;
     header {
         background-color: inherit;
+        height: inherit;
         h1 {
             margin: 0;
             padding: 0;
