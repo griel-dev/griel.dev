@@ -1,5 +1,10 @@
 
 #home {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-shadow: none;
+    border-radius: 0;
     section {
         &#header {
             height: calc(100vh - 75px);
@@ -13,6 +18,7 @@
                 height: 225px;
                 padding: 20px;
                 align-items: center;
+                justify-content: center;
                 h2 {
                     text-align: center;
                     color: var(--base-color);
