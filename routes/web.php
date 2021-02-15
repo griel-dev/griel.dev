@@ -19,6 +19,14 @@ $router->get('/', function() {
     ]);
     $griel->render('soon');
 });
+$router->get('/soon', function() {
+    $griel = new PageController([
+        'title'=>'Griel Developer',
+        'name'=>"Roberto",
+        'site'=>"Griel"
+    ]);
+    $griel->render('index');
+});
 
 $router->post('/teste', function(Illuminate\Http\Request $request){
     return $request->input('aaa');
@@ -57,4 +65,11 @@ $router->get('/dominios', function(Illuminate\Http\Request $request){
         'domainInput'=>$request->input('domain')
     ]);
     $griel->render('domain');
+});
+
+$router->get('/calendario', function() {
+    $griel = new PageController([
+        'title'=>'Calendário'
+    ]);
+    $griel->render('calendar');
 });
